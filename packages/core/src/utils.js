@@ -232,16 +232,26 @@ function computeDefaults(
           (formData || {})[key],
           includeUndefinedValues
         );
+
+        function checkNotRequiredObjectIsHasData(obj) {
+          for (var key in obj) {
+            if (typeof obj[key] === "object") {
+              checkNotRequiredObjectIsHasData(obj[key]);
+            } else if (obj[key] !== undefined) {
+              return true;
+            } else {
+              return false;
+            }
+          }
+        }
+
+        const isHasData = checkNotRequiredObjectIsHasData(computedDefault);
+
         if (includeUndefinedValues || computedDefault !== undefined) {
           if (schema.required && isObject(computedDefault)) {
             if (
               schema.required.includes(key) ||
-              (isObject(computedDefault) &&
-                Boolean(
-                  Object.values(computedDefault).filter(
-                    item => item !== undefined
-                  ).length
-                ))
+              (isObject(computedDefault) && isHasData)
             ) {
               acc[key] = computedDefault;
             }
