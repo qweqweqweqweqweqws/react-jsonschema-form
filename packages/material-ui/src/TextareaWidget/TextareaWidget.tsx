@@ -1,7 +1,7 @@
-import React from 'react';
-import { WidgetProps } from '@rjsf/core';
+import React from "react";
+import { WidgetProps } from "@spectrumrjsf1/core";
 
-import { useMuiComponent } from '../MuiComponentContext';
+import { useMuiComponent } from "../MuiComponentContext";
 
 const TextareaWidget = ({
   id,
@@ -20,13 +20,18 @@ const TextareaWidget = ({
   rawErrors = [],
 }: WidgetProps) => {
   const { TextField } = useMuiComponent();
-  const _onChange = ({ target: { value } }: React.ChangeEvent<HTMLInputElement>) =>
-    onChange(value === '' ? options.emptyValue : value);
-  const _onBlur = ({ target: { value } }: React.FocusEvent<HTMLInputElement>) => onBlur(id, value);
-  const _onFocus = ({ target: { value } }: React.FocusEvent<HTMLInputElement>) => onFocus(id, value);
+  const _onChange = ({
+    target: { value },
+  }: React.ChangeEvent<HTMLInputElement>) =>
+    onChange(value === "" ? options.emptyValue : value);
+  const _onBlur = ({ target: { value } }: React.FocusEvent<HTMLInputElement>) =>
+    onBlur(id, value);
+  const _onFocus = ({
+    target: { value },
+  }: React.FocusEvent<HTMLInputElement>) => onFocus(id, value);
 
   let rows: string | number = 5;
-  if (typeof options.rows === 'string' || typeof options.rows === 'number') {
+  if (typeof options.rows === "string" || typeof options.rows === "number") {
     rows = options.rows;
   }
 

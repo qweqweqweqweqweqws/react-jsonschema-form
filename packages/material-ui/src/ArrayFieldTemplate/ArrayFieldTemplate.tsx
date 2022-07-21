@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
-import { ArrayFieldTemplateProps, IdSchema, utils } from '@rjsf/core';
+import { ArrayFieldTemplateProps, IdSchema, utils } from "@spectrumrjsf1/core";
 
-import AddButton from '../AddButton/AddButton';
-import { useMuiComponent } from '../MuiComponentContext';
+import AddButton from "../AddButton/AddButton";
+import { useMuiComponent } from "../MuiComponentContext";
 
 const { isMultiSelect, getDefaultRegistry } = utils;
 
@@ -24,7 +24,12 @@ type ArrayFieldTitleProps = {
   required: boolean;
 };
 
-const ArrayFieldTitle = ({ TitleField, idSchema, title, required }: ArrayFieldTitleProps) => {
+const ArrayFieldTitle = ({
+  TitleField,
+  idSchema,
+  title,
+  required,
+}: ArrayFieldTitleProps) => {
   if (!title) {
     return null;
   }
@@ -39,7 +44,11 @@ type ArrayFieldDescriptionProps = {
   description: string;
 };
 
-const ArrayFieldDescription = ({ DescriptionField, idSchema, description }: ArrayFieldDescriptionProps) => {
+const ArrayFieldDescription = ({
+  DescriptionField,
+  idSchema,
+  description,
+}: ArrayFieldDescriptionProps) => {
   if (!description) {
     return null;
   }
@@ -50,17 +59,25 @@ const ArrayFieldDescription = ({ DescriptionField, idSchema, description }: Arra
 
 // Used in the two templates
 const DefaultArrayItem = (props: any) => {
-  const { ArrowDownwardIcon, ArrowUpwardIcon, Box, Grid, IconButton, Paper, RemoveIcon } = useMuiComponent();
+  const {
+    ArrowDownwardIcon,
+    ArrowUpwardIcon,
+    Box,
+    Grid,
+    IconButton,
+    Paper,
+    RemoveIcon,
+  } = useMuiComponent();
   const btnStyle = {
     flex: 1,
     paddingLeft: 6,
     paddingRight: 6,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     minWidth: 0,
   };
   return (
     <Grid container={true} key={props.key} alignItems="center">
-      <Grid item={true} xs style={{ overflow: 'auto' }}>
+      <Grid item={true} xs style={{ overflow: "auto" }}>
         <Box mb={2}>
           <Paper elevation={2}>
             <Box p={2}>{props.children}</Box>
@@ -77,8 +94,7 @@ const DefaultArrayItem = (props: any) => {
               tabIndex={-1}
               style={btnStyle as any}
               disabled={props.disabled || props.readonly || !props.hasMoveUp}
-              onClick={props.onReorderClick(props.index, props.index - 1)}
-            >
+              onClick={props.onReorderClick(props.index, props.index - 1)}>
               <ArrowUpwardIcon fontSize="small" />
             </IconButton>
           )}
@@ -89,8 +105,7 @@ const DefaultArrayItem = (props: any) => {
               tabIndex={-1}
               style={btnStyle as any}
               disabled={props.disabled || props.readonly || !props.hasMoveDown}
-              onClick={props.onReorderClick(props.index, props.index + 1)}
-            >
+              onClick={props.onReorderClick(props.index, props.index + 1)}>
               <ArrowDownwardIcon fontSize="small" />
             </IconButton>
           )}
@@ -101,8 +116,7 @@ const DefaultArrayItem = (props: any) => {
               tabIndex={-1}
               style={btnStyle as any}
               disabled={props.disabled || props.readonly}
-              onClick={props.onDropIndexClick(props.index)}
-            >
+              onClick={props.onDropIndexClick(props.index)}>
               <RemoveIcon fontSize="small" />
             </IconButton>
           )}
@@ -119,17 +133,21 @@ const DefaultFixedArrayFieldTemplate = (props: ArrayFieldTemplateProps) => {
         key={`array-field-title-${props.idSchema.$id}`}
         TitleField={props.TitleField}
         idSchema={props.idSchema}
-        title={props.uiSchema['ui:title'] || props.title}
+        title={props.uiSchema["ui:title"] || props.title}
         required={props.required}
       />
 
-      {(props.uiSchema['ui:description'] || props.schema.description) && (
-        <div className="field-description" key={`field-description-${props.idSchema.$id}`}>
-          {props.uiSchema['ui:description'] || props.schema.description}
+      {(props.uiSchema["ui:description"] || props.schema.description) && (
+        <div
+          className="field-description"
+          key={`field-description-${props.idSchema.$id}`}>
+          {props.uiSchema["ui:description"] || props.schema.description}
         </div>
       )}
 
-      <div className="row array-item-list" key={`array-item-list-${props.idSchema.$id}`}>
+      <div
+        className="row array-item-list"
+        key={`array-item-list-${props.idSchema.$id}`}>
         {props.items && props.items.map(DefaultArrayItem)}
       </div>
 
@@ -153,16 +171,18 @@ const DefaultNormalArrayFieldTemplate = (props: ArrayFieldTemplateProps) => {
           key={`array-field-title-${props.idSchema.$id}`}
           TitleField={props.TitleField}
           idSchema={props.idSchema}
-          title={props.uiSchema['ui:title'] || props.title}
+          title={props.uiSchema["ui:title"] || props.title}
           required={props.required}
         />
 
-        {(props.uiSchema['ui:description'] || props.schema.description) && (
+        {(props.uiSchema["ui:description"] || props.schema.description) && (
           <ArrayFieldDescription
             key={`array-field-description-${props.idSchema.$id}`}
             DescriptionField={props.DescriptionField}
             idSchema={props.idSchema}
-            description={props.uiSchema['ui:description'] || props.schema.description}
+            description={
+              props.uiSchema["ui:description"] || props.schema.description
+            }
           />
         )}
 

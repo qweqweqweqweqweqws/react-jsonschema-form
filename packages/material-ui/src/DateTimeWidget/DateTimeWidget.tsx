@@ -1,6 +1,6 @@
-import React from 'react';
-import { utils } from '@rjsf/core';
-import { WidgetProps } from '@rjsf/core';
+import React from "react";
+import { utils } from "@spectrumrjsf1/core";
+import { WidgetProps } from "@spectrumrjsf1/core";
 
 const { localToUTC, utcToLocal } = utils;
 

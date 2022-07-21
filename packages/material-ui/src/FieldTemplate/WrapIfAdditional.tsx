@@ -1,8 +1,8 @@
-import React from 'react';
-import { utils } from '@rjsf/core';
-import { JSONSchema7 } from 'json-schema';
+import React from "react";
+import { utils } from "@spectrumrjsf1/core";
+import { JSONSchema7 } from "json-schema";
 
-import { useMuiComponent } from '../MuiComponentContext';
+import { useMuiComponent } from "../MuiComponentContext";
 
 const { ADDITIONAL_PROPERTY_FLAG } = utils;
 
@@ -30,21 +30,29 @@ const WrapIfAdditional = ({
   required,
   schema,
 }: WrapIfAdditionalProps) => {
-  const { Grid, FormControl, IconButton, InputLabel, Input, RemoveIcon } = useMuiComponent();
+  const {
+    Grid,
+    FormControl,
+    IconButton,
+    InputLabel,
+    Input,
+    RemoveIcon,
+  } = useMuiComponent();
   const keyLabel = `${label} Key`; // i18n ?
   const additional = schema.hasOwnProperty(ADDITIONAL_PROPERTY_FLAG);
   const btnStyle = {
     flex: 1,
     paddingLeft: 6,
     paddingRight: 6,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   };
 
   if (!additional) {
     return <>{children}</>;
   }
 
-  const handleBlur = ({ target }: React.FocusEvent<HTMLInputElement>) => onKeyChange(target.value);
+  const handleBlur = ({ target }: React.FocusEvent<HTMLInputElement>) =>
+    onKeyChange(target.value);
 
   return (
     <Grid container={true} key={`${id}-key`} alignItems="center" spacing={2}>
@@ -70,8 +78,7 @@ const WrapIfAdditional = ({
           tabIndex={-1}
           style={btnStyle as any}
           disabled={disabled || readonly}
-          onClick={onDropPropertyClick(label)}
-        >
+          onClick={onDropPropertyClick(label)}>
           <RemoveIcon />
         </IconButton>
       </Grid>

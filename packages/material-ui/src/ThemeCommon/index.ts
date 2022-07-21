@@ -1,4 +1,4 @@
-import { utils } from '@rjsf/core';
+import { utils } from '@spectrumrjsf1/core';
 
 import ArrayFieldTemplate from '../ArrayFieldTemplate';
 import ErrorList from '../ErrorList';

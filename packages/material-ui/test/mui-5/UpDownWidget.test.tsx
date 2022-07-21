@@ -1,10 +1,10 @@
 import React from "react";
 import { JSONSchema7 } from "json-schema";
 import renderer from "react-test-renderer";
-import { WidgetProps } from "@rjsf/core";
+import { WidgetProps } from "@spectrumrjsf1/core";
 
-import MuiComponentContext from '../../src/MuiComponentContext/MuiComponentContext';
-import { Mui5Context } from '../../src/Theme5/Mui5Context';
+import MuiComponentContext from "../../src/MuiComponentContext/MuiComponentContext";
+import { Mui5Context } from "../../src/Theme5/Mui5Context";
 import UpDownWidget from "../../src/UpDownWidget/UpDownWidget";
 
 export const mockSchema: JSONSchema7 = {
@@ -41,14 +41,15 @@ test("renders 0 as 0 and not ''", () => {
       definitions: {},
       formContext: {},
       rootSchema: {},
-    }
+    },
   };
-  const tree = renderer.create((
-    <MuiComponentContext.Provider value={Mui5Context}>
-      <UpDownWidget {...props} />
-    </MuiComponentContext.Provider>
-  )).toJSON();
+  const tree = renderer
+    .create(
+      <MuiComponentContext.Provider value={Mui5Context}>
+        <UpDownWidget {...props} />
+      </MuiComponentContext.Provider>
+    )
+    .toJSON();
   expect(tree).toMatchSnapshot();
 });
-describe("UpDownWidget", () => {
-});
+describe("UpDownWidget", () => {});

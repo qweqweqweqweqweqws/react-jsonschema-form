@@ -1,7 +1,7 @@
-import React from 'react';
-import { AddButtonProps } from '@rjsf/core';
+import React from "react";
+import { AddButtonProps } from "@spectrumrjsf1/core";
 
-import { useMuiComponent } from '../MuiComponentContext';
+import { useMuiComponent } from "../MuiComponentContext";
 
 const AddButton: React.FC<AddButtonProps> = props => {
   const { AddIcon, Button } = useMuiComponent();

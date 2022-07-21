@@ -1,7 +1,7 @@
-import React from 'react';
-import { FieldProps } from '@rjsf/core';
+import React from "react";
+import { FieldProps } from "@spectrumrjsf1/core";
 
-import { useMuiComponent } from '../MuiComponentContext';
+import { useMuiComponent } from "../MuiComponentContext";
 
 const TitleField = ({ title }: FieldProps) => {
   const { Box, Divider, Typography } = useMuiComponent();

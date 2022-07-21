@@ -2,7 +2,7 @@
 
 exports[`single fields checkbox field 1`] = `
 <form
-  className="rjsf"
+  className="spectrumrjsf1"
   noValidate={false}
   onSubmit={[Function]}
 >
@@ -87,7 +87,7 @@ exports[`single fields checkbox field 1`] = `
 
 exports[`single fields checkbox field 2`] = `
 <form
-  className="rjsf"
+  className="spectrumrjsf1"
   noValidate={false}
   onSubmit={[Function]}
 >
@@ -178,7 +178,7 @@ exports[`single fields checkbox field 2`] = `
 
 exports[`single fields checkboxes field 1`] = `
 <form
-  className="rjsf"
+  className="spectrumrjsf1"
   noValidate={false}
   onSubmit={[Function]}
 >
@@ -411,7 +411,7 @@ exports[`single fields checkboxes field 1`] = `
 
 exports[`single fields format color 1`] = `
 <form
-  className="rjsf"
+  className="spectrumrjsf1"
   noValidate={false}
   onSubmit={[Function]}
 >
@@ -492,7 +492,7 @@ exports[`single fields format color 1`] = `
 
 exports[`single fields format date 1`] = `
 <form
-  className="rjsf"
+  className="spectrumrjsf1"
   noValidate={false}
   onSubmit={[Function]}
 >
@@ -570,7 +570,7 @@ exports[`single fields format date 1`] = `
 
 exports[`single fields format datetime 1`] = `
 <form
-  className="rjsf"
+  className="spectrumrjsf1"
   noValidate={false}
   onSubmit={[Function]}
 >
@@ -651,7 +651,7 @@ exports[`single fields format datetime 1`] = `
 
 exports[`single fields hidden field 1`] = `
 <form
-  className="rjsf"
+  className="spectrumrjsf1"
   noValidate={false}
   onSubmit={[Function]}
 >
@@ -702,7 +702,7 @@ exports[`single fields hidden field 1`] = `
 
 exports[`single fields hidden label 1`] = `
 <form
-  className="rjsf"
+  className="spectrumrjsf1"
   noValidate={false}
   onSubmit={[Function]}
 >
@@ -783,7 +783,7 @@ exports[`single fields hidden label 1`] = `
 
 exports[`single fields null field 1`] = `
 <form
-  className="rjsf"
+  className="spectrumrjsf1"
   noValidate={false}
   onSubmit={[Function]}
 >
@@ -822,7 +822,7 @@ exports[`single fields null field 1`] = `
 
 exports[`single fields number field 0 1`] = `
 <form
-  className="rjsf"
+  className="spectrumrjsf1"
   noValidate={false}
   onSubmit={[Function]}
 >
@@ -900,7 +900,7 @@ exports[`single fields number field 0 1`] = `
 
 exports[`single fields number field 1`] = `
 <form
-  className="rjsf"
+  className="spectrumrjsf1"
   noValidate={false}
   onSubmit={[Function]}
 >
@@ -981,7 +981,7 @@ exports[`single fields number field 1`] = `
 
 exports[`single fields password field 1`] = `
 <form
-  className="rjsf"
+  className="spectrumrjsf1"
   noValidate={false}
   onSubmit={[Function]}
 >
@@ -1059,7 +1059,7 @@ exports[`single fields password field 1`] = `
 
 exports[`single fields radio field 1`] = `
 <form
-  className="rjsf"
+  className="spectrumrjsf1"
   noValidate={false}
   onSubmit={[Function]}
 >
@@ -1238,7 +1238,7 @@ exports[`single fields radio field 1`] = `
 
 exports[`single fields select field 1`] = `
 <form
-  className="rjsf"
+  className="spectrumrjsf1"
   noValidate={false}
   onSubmit={[Function]}
 >
@@ -1348,7 +1348,7 @@ exports[`single fields select field 1`] = `
 
 exports[`single fields string field format data-url 1`] = `
 <form
-  className="rjsf"
+  className="spectrumrjsf1"
   noValidate={false}
   onSubmit={[Function]}
 >
@@ -1400,7 +1400,7 @@ exports[`single fields string field format data-url 1`] = `
 
 exports[`single fields string field format email 1`] = `
 <form
-  className="rjsf"
+  className="spectrumrjsf1"
   noValidate={false}
   onSubmit={[Function]}
 >
@@ -1481,7 +1481,7 @@ exports[`single fields string field format email 1`] = `
 
 exports[`single fields string field format uri 1`] = `
 <form
-  className="rjsf"
+  className="spectrumrjsf1"
   noValidate={false}
   onSubmit={[Function]}
 >
@@ -1559,7 +1559,7 @@ exports[`single fields string field format uri 1`] = `
 
 exports[`single fields string field regular 1`] = `
 <form
-  className="rjsf"
+  className="spectrumrjsf1"
   noValidate={false}
   onSubmit={[Function]}
 >
@@ -1637,7 +1637,7 @@ exports[`single fields string field regular 1`] = `
 
 exports[`single fields string field with placeholder 1`] = `
 <form
-  className="rjsf"
+  className="spectrumrjsf1"
   noValidate={false}
   onSubmit={[Function]}
 >
@@ -1715,7 +1715,7 @@ exports[`single fields string field with placeholder 1`] = `
 
 exports[`single fields textarea field 1`] = `
 <form
-  className="rjsf"
+  className="spectrumrjsf1"
   noValidate={false}
   onSubmit={[Function]}
 >
@@ -1781,7 +1781,7 @@ exports[`single fields textarea field 1`] = `
 
 exports[`single fields unsupported field 1`] = `
 <form
-  className="rjsf"
+  className="spectrumrjsf1"
   noValidate={false}
   onSubmit={[Function]}
 >
@@ -1840,7 +1840,7 @@ exports[`single fields unsupported field 1`] = `
 
 exports[`single fields using custom tagName 1`] = `
 <div
-  className="rjsf"
+  className="spectrumrjsf1"
   noValidate={false}
   onSubmit={[Function]}
 >
