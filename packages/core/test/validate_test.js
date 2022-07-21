@@ -67,7 +67,7 @@ describe("Validation", () => {
         anyOf: [{ $ref: "#/defs/foo" }],
       };
       const expected = {
-        anyOf: [{ $ref: "__rjsf_rootSchema#/defs/foo" }],
+        anyOf: [{ $ref: "__spectrumrjsf1_rootSchema#/defs/foo" }],
       };
 
       expect(withIdRefPrefix(schema)).to.eql(expected);
