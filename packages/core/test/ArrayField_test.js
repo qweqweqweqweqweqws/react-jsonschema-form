@@ -6,7 +6,7 @@ import sinon from "sinon";
 
 import { createFormComponent, createSandbox, submitForm } from "./test_utils";
 
-const ArrayKeyDataAttr = "data-rjsf-itemkey";
+const ArrayKeyDataAttr = "data-spectrumrjsf1-itemkey";
 const ExposedArrayKeyTemplate = function(props) {
   return (
     <div className="array">
@@ -15,7 +15,7 @@ const ExposedArrayKeyTemplate = function(props) {
           <div
             key={element.key}
             className="array-item"
-            data-rjsf-itemkey={element.key}>
+            data-spectrumrjsf1-itemkey={element.key}>
             <div>{element.children}</div>
             {(element.hasMoveUp || element.hasMoveDown) && (
               <button
@@ -430,7 +430,7 @@ describe("ArrayField", () => {
         return (
           <div
             key={item.key}
-            data-rjsf-itemkey={item.key}
+            data-spectrumrjsf1-itemkey={item.key}
             className={`array-item item-${item.index}`}>
             <div>{addBeforeButton}</div>
             {item.children}
@@ -650,7 +650,7 @@ describe("ArrayField", () => {
         return (
           <div
             key={props.key}
-            data-rjsf-itemkey={props.key}
+            data-spectrumrjsf1-itemkey={props.key}
             className={`array-item item-${props.index}`}>
             {props.children}
             {buttons}

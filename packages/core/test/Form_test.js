@@ -159,7 +159,9 @@ describeRepeated("Form common", createFormComponent => {
           },
         },
       };
-      const comp = renderIntoDocument(<Form schema={schema} idPrefix="rjsf" />);
+      const comp = renderIntoDocument(
+        <Form schema={schema} idPrefix="spectrumrjsf1" />
+      );
       const node = findDOMNode(comp);
       const inputs = node.querySelectorAll("input");
       const ids = [];
@@ -167,8 +169,8 @@ describeRepeated("Form common", createFormComponent => {
         const input = inputs[i];
         ids.push(input.getAttribute("id"));
       }
-      expect(ids).to.eql(["rjsf_count"]);
-      expect(node.querySelector("fieldset").id).to.eql("rjsf");
+      expect(ids).to.eql(["spectrumrjsf1_count"]);
+      expect(node.querySelector("fieldset").id).to.eql("spectrumrjsf1");
     });
   });
 
@@ -184,7 +186,9 @@ describeRepeated("Form common", createFormComponent => {
           },
         },
       };
-      const comp = renderIntoDocument(<Form schema={schema} idPrefix="rjsf" />);
+      const comp = renderIntoDocument(
+        <Form schema={schema} idPrefix="spectrumrjsf1" />
+      );
       const node = findDOMNode(comp);
       const inputs = node.querySelectorAll("input");
       const ids = [];
@@ -192,8 +196,8 @@ describeRepeated("Form common", createFormComponent => {
         const input = inputs[i];
         ids.push(input.getAttribute("id"));
       }
-      expect(ids).to.eql(["rjsf_count"]);
-      expect(node.querySelector("fieldset").id).to.eql("rjsf");
+      expect(ids).to.eql(["spectrumrjsf1_count"]);
+      expect(node.querySelector("fieldset").id).to.eql("spectrumrjsf1");
     });
 
     it("should work with oneOf", function() {
@@ -240,7 +244,9 @@ describeRepeated("Form common", createFormComponent => {
         },
       };
 
-      const comp = renderIntoDocument(<Form schema={schema} idPrefix="rjsf" />);
+      const comp = renderIntoDocument(
+        <Form schema={schema} idPrefix="spectrumrjsf1" />
+      );
       const node = findDOMNode(comp);
       const inputs = node.querySelectorAll("input");
       const ids = [];
@@ -248,7 +254,7 @@ describeRepeated("Form common", createFormComponent => {
         const input = inputs[i];
         ids.push(input.getAttribute("id"));
       }
-      expect(ids).to.eql(["rjsf_key_aws"]);
+      expect(ids).to.eql(["spectrumrjsf1_key_aws"]);
     });
   });
 
@@ -2123,7 +2129,7 @@ describeRepeated("Form common", createFormComponent => {
   });
 
   describe("Schema and formData updates", () => {
-    // https://github.com/rjsf-team/react-jsonschema-form/issues/231
+    // https://github.com/spectrumrjsf1-team/react-jsonschema-form/issues/231
     const schema = {
       type: "object",
       properties: {
@@ -3018,7 +3024,7 @@ describe("Form omitExtraData and liveOmit", () => {
           level2: { $name: "level1.level2" },
           mixedMap: {
             $name: "level1.mixedMap",
-            __rjsf_additionalProperties: true,
+            __spectrumrjsf1_additionalProperties: true,
             namedField: { $name: "level1.mixedMap.namedField" }, // this name should not be returned, as the root object paths should be returned for objects marked with additionalProperties
           },
         },

@@ -1,8 +1,8 @@
-import React from 'react';
-import { ObjectFieldTemplateProps, utils } from '@rjsf/core';
+import React from "react";
+import { ObjectFieldTemplateProps, utils } from "@spectrumrjsf1/core";
 
-import { useMuiComponent } from '../MuiComponentContext';
-import AddButton from '../AddButton/AddButton';
+import { useMuiComponent } from "../MuiComponentContext";
+import AddButton from "../AddButton/AddButton";
 
 const { canExpand } = utils;
 
@@ -24,18 +24,31 @@ const ObjectFieldTemplate = ({
   const { Grid } = useMuiComponent();
   return (
     <>
-      {(uiSchema['ui:title'] || title) && (
-        <TitleField id={`${idSchema.$id}-title`} title={title} required={required} />
+      {(uiSchema["ui:title"] || title) && (
+        <TitleField
+          id={`${idSchema.$id}-title`}
+          title={title}
+          required={required}
+        />
       )}
-      {description && <DescriptionField id={`${idSchema.$id}-description`} description={description} />}
-      <Grid container={true} spacing={2} style={{ marginTop: '10px' }}>
+      {description && (
+        <DescriptionField
+          id={`${idSchema.$id}-description`}
+          description={description}
+        />
+      )}
+      <Grid container={true} spacing={2} style={{ marginTop: "10px" }}>
         {properties.map((element, index) =>
           // Remove the <Grid> if the inner element is hidden as the <Grid>
           // itself would otherwise still take up space.
           element.hidden ? (
             element.content
           ) : (
-            <Grid item={true} xs={12} key={index} style={{ marginBottom: '10px' }}>
+            <Grid
+              item={true}
+              xs={12}
+              key={index}
+              style={{ marginBottom: "10px" }}>
               {element.content}
             </Grid>
           )

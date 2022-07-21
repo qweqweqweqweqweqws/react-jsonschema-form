@@ -5,7 +5,7 @@ import { deepEquals, getDefaultFormState } from "./utils";
 
 let formerCustomFormats = null;
 let formerMetaSchema = null;
-const ROOT_SCHEMA_PREFIX = "__rjsf_rootSchema";
+const ROOT_SCHEMA_PREFIX = "__spectrumrjsf1_rootSchema";
 
 import { isObject, mergeObjects } from "./utils";
 

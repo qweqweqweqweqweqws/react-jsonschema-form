@@ -232,16 +232,26 @@ function computeDefaults(
           (formData || {})[key],
           includeUndefinedValues
         );
+
+        function checkNotRequiredObjectIsHasData(obj) {
+          for (var key in obj) {
+            if (typeof obj[key] === "object") {
+              checkNotRequiredObjectIsHasData(obj[key]);
+            } else if (obj[key] !== undefined) {
+              return true;
+            } else {
+              return false;
+            }
+          }
+        }
+
+        const isHasData = checkNotRequiredObjectIsHasData(computedDefault);
+
         if (includeUndefinedValues || computedDefault !== undefined) {
           if (schema.required && isObject(computedDefault)) {
             if (
               schema.required.includes(key) ||
-              (isObject(computedDefault) &&
-                Boolean(
-                  Object.values(computedDefault).filter(
-                    item => item !== undefined
-                  ).length
-                ))
+              (isObject(computedDefault) && isHasData)
             ) {
               acc[key] = computedDefault;
             }
@@ -1013,7 +1023,7 @@ export function deepEquals(a, b, ca = [], cb = []) {
     return true;
   } else if (typeof a === "function" || typeof b === "function") {
     // Assume all functions are equivalent
-    // see https://github.com/rjsf-team/react-jsonschema-form/issues/255
+    // see https://github.com/spectrumrjsf1-team/react-jsonschema-form/issues/255
     return true;
   } else if (typeof a !== "object" || typeof b !== "object") {
     return false;
@@ -1142,7 +1152,7 @@ export function toPathSchema(schema, name = "", rootSchema, formData = {}) {
   }
 
   if (schema.hasOwnProperty("additionalProperties")) {
-    pathSchema.__rjsf_additionalProperties = true;
+    pathSchema.__spectrumrjsf1_additionalProperties = true;
   }
 
   if (schema.hasOwnProperty("items") && Array.isArray(formData)) {

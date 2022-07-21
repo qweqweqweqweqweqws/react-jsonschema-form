@@ -1,7 +1,7 @@
 import React from "react";
 import { JSONSchema7 } from "json-schema";
 import renderer from "react-test-renderer";
-import { UiSchema } from "@rjsf/core";
+import { UiSchema } from "@spectrumrjsf1/core";
 import { MuiForm4 as Form } from "../src/index";
 
 describe("single fields", () => {
@@ -234,7 +234,9 @@ describe("single fields", () => {
     const schema: JSONSchema7 = {
       type: "string",
     };
-    const tree = renderer.create(<Form schema={schema} tagName="div" />).toJSON();
+    const tree = renderer
+      .create(<Form schema={schema} tagName="div" />)
+      .toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

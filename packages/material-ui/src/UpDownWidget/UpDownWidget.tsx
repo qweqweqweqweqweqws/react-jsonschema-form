@@ -1,7 +1,7 @@
-import React from 'react';
-import { WidgetProps } from '@rjsf/core';
+import React from "react";
+import { WidgetProps } from "@spectrumrjsf1/core";
 
-import { useMuiComponent } from '../MuiComponentContext';
+import { useMuiComponent } from "../MuiComponentContext";
 
 const UpDownWidget = ({
   id,
@@ -16,9 +16,14 @@ const UpDownWidget = ({
   autofocus,
 }: WidgetProps) => {
   const { FormControl, InputLabel, Input } = useMuiComponent();
-  const _onChange = ({ target: { value } }: React.ChangeEvent<HTMLInputElement>) => onChange(value);
-  const _onBlur = ({ target: { value } }: React.FocusEvent<HTMLInputElement>) => onBlur(id, value);
-  const _onFocus = ({ target: { value } }: React.FocusEvent<HTMLInputElement>) => onFocus(id, value);
+  const _onChange = ({
+    target: { value },
+  }: React.ChangeEvent<HTMLInputElement>) => onChange(value);
+  const _onBlur = ({ target: { value } }: React.FocusEvent<HTMLInputElement>) =>
+    onBlur(id, value);
+  const _onFocus = ({
+    target: { value },
+  }: React.FocusEvent<HTMLInputElement>) => onFocus(id, value);
 
   return (
     <FormControl fullWidth={true} required={required}>
@@ -29,7 +34,7 @@ const UpDownWidget = ({
         required={required}
         type="number"
         disabled={disabled || readonly}
-        value={value || value === 0 ? value : ''}
+        value={value || value === 0 ? value : ""}
         onChange={_onChange}
         onBlur={_onBlur}
         onFocus={_onFocus}

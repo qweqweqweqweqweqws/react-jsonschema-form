@@ -3173,10 +3173,10 @@ describe("utils", () => {
         $ref: "#/definitions/testdef",
       };
 
-      expect(toIdSchema(schema, undefined, schema, {}, "rjsf")).eql({
-        $id: "rjsf",
-        foo: { $id: "rjsf_foo" },
-        bar: { $id: "rjsf_bar" },
+      expect(toIdSchema(schema, undefined, schema, {}, "spectrumrjsf1")).eql({
+        $id: "spectrumrjsf1",
+        foo: { $id: "spectrumrjsf1_foo" },
+        bar: { $id: "spectrumrjsf1_bar" },
       });
     });
 
@@ -3194,10 +3194,12 @@ describe("utils", () => {
         $ref: "#/definitions/testdef",
       };
 
-      expect(toIdSchema(schema, undefined, schema, {}, "rjsf", "/")).eql({
-        $id: "rjsf",
-        foo: { $id: "rjsf/foo" },
-        bar: { $id: "rjsf/bar" },
+      expect(
+        toIdSchema(schema, undefined, schema, {}, "spectrumrjsf1", "/")
+      ).eql({
+        $id: "spectrumrjsf1",
+        foo: { $id: "spectrumrjsf1/foo" },
+        bar: { $id: "spectrumrjsf1/bar" },
       });
     });
 
@@ -3210,12 +3212,12 @@ describe("utils", () => {
         },
       };
       const formData = null;
-      const result = toIdSchema(schema, null, {}, formData, "rjsf");
+      const result = toIdSchema(schema, null, {}, formData, "spectrumrjsf1");
 
       expect(result).eql({
-        $id: "rjsf",
-        foo: { $id: "rjsf_foo" },
-        bar: { $id: "rjsf_bar" },
+        $id: "spectrumrjsf1",
+        foo: { $id: "spectrumrjsf1_foo" },
+        bar: { $id: "spectrumrjsf1_bar" },
       });
     });
   });

@@ -1,10 +1,19 @@
-import React from 'react';
-import { ErrorListProps } from '@rjsf/core';
+import React from "react";
+import { ErrorListProps } from "@spectrumrjsf1/core";
 
-import { useMuiComponent } from '../MuiComponentContext';
+import { useMuiComponent } from "../MuiComponentContext";
 
 const ErrorList = ({ errors }: ErrorListProps) => {
-  const { Box, Typography, List, ListItem, ListItemIcon, ListItemText, Paper, ErrorIcon } = useMuiComponent();
+  const {
+    Box,
+    Typography,
+    List,
+    ListItem,
+    ListItemIcon,
+    ListItemText,
+    Paper,
+    ErrorIcon,
+  } = useMuiComponent();
   return (
     <Paper elevation={2}>
       <Box mb={2} p={2}>

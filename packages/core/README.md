@@ -6,23 +6,23 @@
 
 <br />
 <p align="center">
-  <a href="https://github.com/rjsf-team/react-jsonschema-form">
-    <img src="https://raw.githubusercontent.com/rjsf-team/react-jsonschema-form/59a8206e148474bea854bbb004f624143fbcbac8/packages/core/logo.png" alt="Logo" width="180" height="120">
+  <a href="https://github.com/spectrumrjsf1-team/react-jsonschema-form">
+    <img src="https://raw.githubusercontent.com/spectrumrjsf1-team/react-jsonschema-form/59a8206e148474bea854bbb004f624143fbcbac8/packages/core/logo.png" alt="Logo" width="180" height="120">
   </a>
 
-  <h3 align="center">@rjsf/core</h3>
+  <h3 align="center">@spectrumrjsf1/core</h3>
 
   <p align="center">
-  Core logic and classic Bootstrap 3 theme for <a href="https://github.com/rjsf-team/react-jsonschema-form/"><code>react-jsonschema-form</code></a>.
+  Core logic and classic Bootstrap 3 theme for <a href="https://github.com/spectrumrjsf1-team/react-jsonschema-form/"><code>react-jsonschema-form</code></a>.
     <br />
     <a href="https://react-jsonschema-form.readthedocs.io/en/latest/"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://rjsf-team.github.io/react-jsonschema-form/">View Playground</a>
+    <a href="https://spectrumrjsf1-team.github.io/react-jsonschema-form/">View Playground</a>
     ·
-    <a href="https://github.com/rjsf-team/react-jsonschema-form/issues">Report Bug</a>
+    <a href="https://github.com/spectrumrjsf1-team/react-jsonschema-form/issues">Report Bug</a>
     ·
-    <a href="https://github.com/rjsf-team/react-jsonschema-form/issues">Request Feature</a>
+    <a href="https://github.com/spectrumrjsf1-team/react-jsonschema-form/issues">Request Feature</a>
   </p>
 </p>
 
@@ -47,7 +47,7 @@ Core logic and classic Bootstrap 3 theme for `react-jsonschema-form`.
 
 ### Built With
 
-- [react-jsonschema-form](https://github.com/rjsf-team/react-jsonschema-form/)
+- [react-jsonschema-form](https://github.com/spectrumrjsf1-team/react-jsonschema-form/)
 - [Bootstrap 3](https://getbootstrap.com/docs/3.3/)
 
 <!-- GETTING STARTED -->
@@ -61,26 +61,29 @@ Core logic and classic Bootstrap 3 theme for `react-jsonschema-form`.
 To use the default Bootstrap 3 theme, add a Bootstrap 3 CSS tag to your HTML page:
 
 ```html
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link
+  rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+/>
 ```
 
 ### Installation
 
 ```sh
-npm install @rjsf/core
+npm install @spectrumrjsf1/core
 ```
 
 ## Usage
 
 ```javascript
-import Form from '@rjsf/core';
+import Form from "@spectrumrjsf1/core";
 ```
 
 <!-- ROADMAP -->
 
 ## Roadmap
 
-See the general [open issues](https://github.com/rjsf-team/react-jsonschema-form/issues).
+See the general [open issues](https://github.com/spectrumrjsf1-team/react-jsonschema-form/issues).
 
 <!-- CONTRIBUTING -->
 
@@ -92,21 +95,21 @@ Read our [contributors' guide](https://react-jsonschema-form.readthedocs.io/en/l
 
 ## Contact
 
-rjsf team: [https://github.com/orgs/rjsf-team/people](https://github.com/orgs/rjsf-team/people)
+spectrumrjsf1 team: [https://github.com/orgs/spectrumrjsf1-team/people](https://github.com/orgs/spectrumrjsf1-team/people)
 
-GitHub repository: [https://github.com/rjsf-team/react-jsonschema-form](https://github.com/rjsf-team/react-jsonschema-form)
+GitHub repository: [https://github.com/spectrumrjsf1-team/react-jsonschema-form](https://github.com/spectrumrjsf1-team/react-jsonschema-form)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[build-shield]: https://github.com/rjsf-team/react-jsonschema-form/workflows/CI/badge.svg
-[build-url]: https://github.com/rjsf-team/react-jsonschema-form/actions
-[contributors-shield]: https://img.shields.io/github/contributors/rjsf-team/react-jsonschema-form.svg
-[contributors-url]: https://github.com/rjsf-team/react-jsonschema-form/graphs/contributors
+[build-shield]: https://github.com/spectrumrjsf1-team/react-jsonschema-form/workflows/CI/badge.svg
+[build-url]: https://github.com/spectrumrjsf1-team/react-jsonschema-form/actions
+[contributors-shield]: https://img.shields.io/github/contributors/spectrumrjsf1-team/react-jsonschema-form.svg
+[contributors-url]: https://github.com/spectrumrjsf1-team/react-jsonschema-form/graphs/contributors
 [license-shield]: https://img.shields.io/badge/license-Apache%202.0-blue.svg?style=flat-square
 [license-url]: https://choosealicense.com/licenses/apache-2.0/
-[npm-shield]: https://img.shields.io/npm/v/@rjsf/core/latest.svg?style=flat-square
-[npm-url]: https://www.npmjs.com/package/@rjsf/core
-[npm-dl-shield]: https://img.shields.io/npm/dm/@rjsf/core.svg?style=flat-square
-[npm-dl-url]: https://www.npmjs.com/package/@rjsf/core
-[product-screenshot]: https://raw.githubusercontent.com/rjsf-team/react-jsonschema-form/59a8206e148474bea854bbb004f624143fbcbac8/packages/core/screenshot.png
+[npm-shield]: https://img.shields.io/npm/v/@spectrumrjsf1/core/latest.svg?style=flat-square
+[npm-url]: https://www.npmjs.com/package/@spectrumrjsf1/core
+[npm-dl-shield]: https://img.shields.io/npm/dm/@spectrumrjsf1/core.svg?style=flat-square
+[npm-dl-url]: https://www.npmjs.com/package/@spectrumrjsf1/core
+[product-screenshot]: https://raw.githubusercontent.com/spectrumrjsf1-team/react-jsonschema-form/59a8206e148474bea854bbb004f624143fbcbac8/packages/core/screenshot.png

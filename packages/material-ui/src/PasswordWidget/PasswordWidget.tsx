@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import { WidgetProps } from '@rjsf/core';
+import { WidgetProps } from "@spectrumrjsf1/core";
 
 const PasswordWidget = (props: WidgetProps) => {
   const { registry } = props;

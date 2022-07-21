@@ -2,7 +2,7 @@
 
 exports[`array fields array 1`] = `
 <form
-  className="rjsf"
+  className="spectrumrjsf1"
   noValidate={false}
   onSubmit={[Function]}
 >
@@ -95,7 +95,7 @@ exports[`array fields array 1`] = `
 
 exports[`array fields array icons 1`] = `
 <form
-  className="rjsf"
+  className="spectrumrjsf1"
   noValidate={false}
   onSubmit={[Function]}
 >
@@ -594,7 +594,7 @@ exports[`array fields array icons 1`] = `
 
 exports[`array fields checkboxes 1`] = `
 <form
-  className="rjsf"
+  className="spectrumrjsf1"
   noValidate={false}
   onSubmit={[Function]}
 >
@@ -701,7 +701,7 @@ exports[`array fields checkboxes 1`] = `
 
 exports[`array fields fixed array 1`] = `
 <form
-  className="rjsf"
+  className="spectrumrjsf1"
   noValidate={false}
   onSubmit={[Function]}
 >

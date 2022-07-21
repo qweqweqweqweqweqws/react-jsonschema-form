@@ -1,5 +1,5 @@
-import React from 'react';
-import { WidgetProps } from '@rjsf/core';
+import React from "react";
+import { WidgetProps } from "@spectrumrjsf1/core";
 
 const ColorWidget = (props: WidgetProps) => {
   const { registry } = props;

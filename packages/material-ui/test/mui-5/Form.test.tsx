@@ -1,7 +1,7 @@
 import React from "react";
 import { JSONSchema7 } from "json-schema";
 import renderer from "react-test-renderer";
-import { UiSchema } from "@rjsf/core";
+import { UiSchema } from "@spectrumrjsf1/core";
 import { MuiForm5 as Form } from "../../src";
 
 describe("single fields", () => {
@@ -119,7 +119,7 @@ describe("single fields", () => {
   });
   // There is an issue with TextareaAutosize in mui/material that fails in the tests
   // Re-enable when the following MUI issue is fixed: https://github.com/mui-org/material-ui/issues/29632
-  test.skip('textarea field', () => {
+  test.skip("textarea field", () => {
     const schema: JSONSchema7 = {
       type: "string",
     };
@@ -236,7 +236,9 @@ describe("single fields", () => {
     const schema: JSONSchema7 = {
       type: "string",
     };
-    const tree = renderer.create(<Form schema={schema} tagName="div" />).toJSON();
+    const tree = renderer
+      .create(<Form schema={schema} tagName="div" />)
+      .toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

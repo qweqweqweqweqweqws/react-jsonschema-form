@@ -1,4 +1,4 @@
-const copy = require('rollup-plugin-copy');
+const copy = require("rollup-plugin-copy");
 
 /** Provides a custom tsdx config with a `rollup()` function that gets called for each of the module generated. In our
  * case it gets called first for the `cjs` development build, then for the `cjs` production build and lastly for the
@@ -14,7 +14,7 @@ const copy = require('rollup-plugin-copy');
  * In order to get `tdsx` to properly build the `v4.js` or `v5.js` index files, we need to specify them explicitly in
  * the command as follows:
  * ```
- * tsdx build -i ./src/v5.ts --name @rjsf/material-ui-v5 && tsdx build -i ./src/v4.ts --name @rjsf/material-ui-v4
+ * tsdx build -i ./src/v5.ts --name @spectrumrjsf1/material-ui-v5 && tsdx build -i ./src/v4.ts --name @spectrumrjsf1/material-ui-v4
  * ```
  *
  * After running those we will finally run the main build as follows:
@@ -47,10 +47,10 @@ module.exports = {
   rollup(config, options) {
     // If the -i option was specified then we are dealing with a v4 or v5 build
     if (options.i) {
-      // The name we specified will look like `@rjsf/material-ui-v(4/5)` so get the `v(4/5)` off the end
+      // The name we specified will look like `@spectrumrjsf1/material-ui-v(4/5)` so get the `v(4/5)` off the end
       const version = options.name.substring(options.name.length - 2);
-      // Strip off the `@rjsf` leaving `/material-ui-v(4/5)`
-      const packageName = options.name.replace('@rjsf', '');
+      // Strip off the `@spectrumrjsf1` leaving `/material-ui-v(4/5)`
+      const packageName = options.name.replace("@spectrumrjsf1", "");
       // Find the location of the package name in the config's output file name
       const index = config.output.file.lastIndexOf(packageName);
       // Compute just the source directory from the config's output file name
@@ -58,32 +58,31 @@ module.exports = {
       // Compute just the file name form the config's output file name
       const srcName = config.output.file.substring(index);
       // Compute the destination directory by replacing `dist` with `dist-temp/version`
-      const dest = srcDir.replace('dist', `dist-temp`);
+      const dest = srcDir.replace("dist", `dist-temp`);
       // Setup the targets for the copy plugin, one for each file...
       // Don't worry if the file isn't there simply isn't copied
       const targets = [
         { src: `${srcDir}/index.js`, dest, rename: `${version}.js` },
         { src: `${srcDir}${srcName}`, dest },
         { src: `${srcDir}${srcName}.map`, dest },
-      ]
+      ];
       // Append the copy plugin with the targets, setting the hook point to be when the whole generated bundle is done
       // See [rollup output generation hooks](https://rollupjs.org/guide/en/#output-generation-hooks) documentation
-      config.plugins.push(copy({ targets, hook: 'writeBundle' }))
-    } else if (config.output.format === 'esm') { // Check for the last run of the main `tsdx` build
-      // Strip off the `@rjsf` leaving `/material-ui`
-      const packageName = options.name.replace('@rjsf', '');
+      config.plugins.push(copy({ targets, hook: "writeBundle" }));
+    } else if (config.output.format === "esm") {
+      // Check for the last run of the main `tsdx` build
+      // Strip off the `@spectrumrjsf1` leaving `/material-ui`
+      const packageName = options.name.replace("@spectrumrjsf1", "");
       // Find the location of the package name in the config's output file name
       const index = config.output.file.indexOf(`${packageName}.esm.js`);
       // Compute just the destination directory from the config's output file name
       const dest = config.output.file.substring(0, index);
       // Compute the source directory by replacing `dist` with the `dist-temp/*` wildcard
-      const src = dest.replace('dist', 'dist-temp/*');
+      const src = dest.replace("dist", "dist-temp/*");
       // Setup the single target for the copy plugin
-      const targets = [
-        { src, dest },
-      ]
+      const targets = [{ src, dest }];
       // Append the copy plugin with the targets, setting the hook point to be when the whole generated bundle is done
-      config.plugins.push(copy({ targets, hook: 'writeBundle' }))
+      config.plugins.push(copy({ targets, hook: "writeBundle" }));
     }
     // Uncomment to debug the resulting config
     // console.dir(config, { depth: null });
